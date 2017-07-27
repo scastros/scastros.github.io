@@ -1,0 +1,41 @@
+<style>
+					body { margin: 0; padding: 0; }
+</style>
+				<script type="text/javascript" language="JavaScript" src="../assets/js/anim-library.js"></script>
+                <script type="text/javascript" language="JavaScript" src="../assets/js/html5clocks.js"></script>
+                <script type="text/javascript" language="JavaScript" src="..//assets/js/html5-004.js"></script>
+				<script type="text/javascript" language="JavaScript">
+					function isCanvasSupported(){
+						var elem = document.createElement("canvas");
+						return !!(elem.getContext && elem.getContext("2d"));
+					}
+      		if(isCanvasSupported()){
+              var clock,animFrame;
+              animFrame = new AnimFrame();
+              clock = new Clock(
+              new BaseClock(
+              2017,
+              7,
+              28,
+              null,
+              54,
+              4,
+              null),
+              "/assets/js/",
+              "",
+              "https://sergiocast.ro",
+              "/img/ads/240_80.png",
+              {
+              clock : '004',
+              timezone : 'ACST',
+              color : 'gray',
+              size : '120',
+              Title : '',
+              Message : '',
+              Target : '',
+              From : '2017,1,1,0,0,0',
+              Color : 'gray'});
+              animFrame.push(clock);
+              animFrame.start();
+            }
+				</script>
